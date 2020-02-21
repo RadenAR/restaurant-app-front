@@ -6,7 +6,7 @@ const onCreateSuccess = response => {
   $('#message').removeClass('failure')
   $('#message').addClass('success')
 }
-const onCreateFailure = response => {
+const onCreateFailure = () => {
   $('#message').text('Creation Failure')
   $('#sign-up').trigger('reset')
 
@@ -21,8 +21,15 @@ const onIndexSuccess = response => {
   $('#clear-restaurants').show()
 }
 
-const onIndexFailure = response => {
+const onIndexFailure = () => {
   $('#message').text('Getting Restaurants Failed')
+
+  $('#message').removeClass('success')
+  $('#message').addClass('failure')
+}
+
+const onDeleteFailure = () => {
+  $('#message').text('Deletion Failed')
 
   $('#message').removeClass('success')
   $('#message').addClass('failure')
@@ -32,5 +39,6 @@ module.exports = {
   onCreateSuccess,
   onCreateFailure,
   onIndexSuccess,
-  onIndexFailure
+  onIndexFailure,
+  onDeleteFailure
 }

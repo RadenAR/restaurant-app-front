@@ -25,8 +25,19 @@ const onClear = () => {
   $('#clear-restaurants').hide()
 }
 
+const onDelete = event => {
+  event.preventDefault()
+  const id = $(event.target).data('id')
+  api.deleteRestaurant(id)
+    .then(function () {
+      onIndex(event)
+    })
+    .catch(ui.onDeleteFailure)
+}
+
 module.exports = {
   onCreate,
   onIndex,
-  onClear
+  onClear,
+  onDelete
 }
