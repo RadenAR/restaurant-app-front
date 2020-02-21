@@ -77,6 +77,9 @@ const onSignOutSuccess = () => {
   $('#clear-restaurants').hide()
 
   $('#sign-up').show()
+
+  $('#new-restaurant').trigger('reset')
+  $('#update').trigger('reset')
 }
 
 const onSignOutFailure = () => {
