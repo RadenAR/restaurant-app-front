@@ -3,7 +3,6 @@ const showRestaurantsTemplate = require('../templates/restaurant-listing.handleb
 
 const onCreateSuccess = response => {
   $('#message').text(`${response.restaurant.name} successfully added!`)
-  console.log(response)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
 }
@@ -16,7 +15,6 @@ const onCreateFailure = response => {
 }
 
 const onIndexSuccess = response => {
-  console.log(response)
   const showRestaurantsHtml = showRestaurantsTemplate({ restaurants: response.restaurants })
   $('.content').html(showRestaurantsHtml)
   $('.content').show()

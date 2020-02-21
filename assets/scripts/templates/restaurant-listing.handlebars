@@ -16,6 +16,9 @@
     <p>
       {{restaurant.cuisine_type}}
     </p>
+    {{#if restaurant.editable}}
+        <btn class='btn btn-danger remove-restaurant' data-id='{{restaurant.id}}'>Remove Restaurant</btn>
+    {{/if}}
   </section>
 
 {{/each}}

@@ -16,7 +16,10 @@ const create = data => {
 const index = () => {
   return $.ajax({
     url: config.apiUrl + '/restaurants',
-    method: 'GET'
+    method: 'GET',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
   })
 }
 
