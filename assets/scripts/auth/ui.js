@@ -27,6 +27,7 @@ const onSignInSuccess = response => {
 
   $('#sign-out').show()
   $('#change-pw').show()
+  $('#sign-in').hide()
 
   $('#new-restaurant').show()
   $('#index').show()
