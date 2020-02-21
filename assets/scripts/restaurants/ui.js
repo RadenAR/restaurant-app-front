@@ -3,12 +3,12 @@ const showRestaurantsTemplate = require('../templates/restaurant-listing.handleb
 
 const onCreateSuccess = response => {
   $('#message').text(`${response.restaurant.name} successfully added!`)
+  $('#new-restaurant').trigger('reset')
   $('#message').removeClass('failure')
   $('#message').addClass('success')
 }
 const onCreateFailure = () => {
   $('#message').text('Creation Failure')
-  $('#sign-up').trigger('reset')
 
   $('#message').removeClass('success')
   $('#message').addClass('failure')
@@ -37,6 +37,7 @@ const onDeleteFailure = () => {
 
 const onUpdateSuccess = () => {
   $('#message').text(`Update Successful!`)
+  $('#update').trigger('reset')
 
   $('#message').removeClass('failure')
   $('#message').addClass('success')
