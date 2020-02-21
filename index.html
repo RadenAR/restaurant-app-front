@@ -64,5 +64,25 @@
             </fieldset>
           </form>
         </div>
+
+        <div>
+          <form id='new-restaurant'>
+            <fieldset>
+              <legend>New Restaurant</legend>
+                <div class="form-group">
+                  <label>Name</label>
+                  <input type='text' class="form-control" name='restaurant[name]' placeholder='example' required>
+                  <label>Address</label>
+                  <input type='text' class="form-control" name='restaurant[address]' placeholder='example' required>
+                  <label>Rating</label>
+                  <input type='number' class="form-control" name='restaurant[rating]' placeholder='0' required>
+                  <label>Cuisine Type</label>
+                  <input type='text' class="form-control" name='restaurant[cuisine_type]' placeholder='example' required>
+                  <br>
+                  <input type='submit' class="btn btn-primary alt-color" value='Create'>
+              </div>
+            </fieldset>
+        </form>
+        </div>
     </body>
 </html>

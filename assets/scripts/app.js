@@ -1,6 +1,7 @@
 'use strict'
 
 const authEvents = require('./auth/events')
+const restaurantEvents = require('./restaurants/events')
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
@@ -15,4 +16,8 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#change-pw').hide()
   $('#sign-out').hide()
+
+  // restaurant events
+  $('#new-restaurant').on('submit', restaurantEvents.onCreate)
+  $('#new-restaurant').hide()
 })
