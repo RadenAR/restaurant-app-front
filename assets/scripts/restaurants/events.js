@@ -12,6 +12,15 @@ const onCreate = event => {
     .catch(ui.onCreateFailure)
 }
 
+const onIndex = event => {
+  event.preventDefault()
+
+  api.index()
+    .then(ui.onIndexSuccess)
+    .catch(ui.onIndexFailure)
+}
+
 module.exports = {
-  onCreate
+  onCreate,
+  onIndex
 }

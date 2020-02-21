@@ -16,7 +16,20 @@ const onCreateFailure = response => {
   $('#message').addClass('failure')
 }
 
+const onIndexSuccess = response => {
+  console.log(response)
+}
+
+const onIndexFailure = response => {
+  $('#message').text('Getting Restaurants Failed')
+
+  $('#message').removeClass('success')
+  $('#message').addClass('failure')
+}
+
 module.exports = {
   onCreateSuccess,
-  onCreateFailure
+  onCreateFailure,
+  onIndexSuccess,
+  onIndexFailure
 }

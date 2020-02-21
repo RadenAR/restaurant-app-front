@@ -13,6 +13,14 @@ const create = data => {
   })
 }
 
+const index = () => {
+  return $.ajax({
+    url: config.apiUrl + '/restaurants',
+    method: 'GET'
+  })
+}
+
 module.exports = {
-  create
+  create,
+  index
 }

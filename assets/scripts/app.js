@@ -20,5 +20,6 @@ $(() => {
   // restaurant events
   $('#new-restaurant').on('submit', restaurantEvents.onCreate)
   $('#new-restaurant').hide()
-  $('#get-all').hide()
+  $('#index').on('submit', restaurantEvents.onIndex)
+  $('#index').hide()
 })
