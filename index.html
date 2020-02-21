@@ -11,6 +11,12 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <div class="container">
+        <div class="row">
+          <h1 id='message' class = 'col-12'></h1>
+        </div>
+      </div>
+
       <form id='sign-up'>
           <fieldset>
             <legend>Sign Up!</legend>
@@ -39,19 +45,18 @@
             </div>
           </fieldset>
       </form>
-      <form id='change-pw'>
-          <fieldset>
-            <legend>Change PW</legend>
-            <div class="form-group">
-              <label>Password</label>
-              <input type='password' class="form-control" name='credentials[password]'  placeholder='*****'>
-              <label>New Password</label>
-              <input type='password' class="form-control" name='credentials[new_password]'  placeholder='******'>
-              <br>
-              <input type='submit' class="btn btn-primary alt-color" value='Change'>
-            </div>
-          </fieldset>
-        </form>
+      <form id='change-pw' class="col-4">
+            <fieldset>
+              <legend>Change Password</legend>
+              <div class="form-group">
+                <input type='password' class="form-control" name='passwords[old]'  placeholder='Old'>
+                <br>
+                <input type='password' class="form-control" name='passwords[new]'  placeholder='New'>
+                <br>
+                <input type='submit' class="btn btn-secondary" value='Change Password'>
+              </div>
+            </fieldset>
+          </form>
         <div class="container text-center col-12">
           <form id='sign-out'>
             <fieldset>
