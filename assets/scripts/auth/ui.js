@@ -70,6 +70,7 @@ const onSignOutSuccess = () => {
 
   $('#new-restaurant').hide()
   $('#index').hide()
+  $('.content').hide()
 }
 
 const onSignOutFailure = () => {

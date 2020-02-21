@@ -1,6 +1,5 @@
 'use strict'
-
-// const store = require('../store')
+const showRestaurantsTemplate = require('../templates/restaurant-listing.handlebars')
 
 const onCreateSuccess = response => {
   $('#message').text(`${response.restaurant.name} successfully added!`)
@@ -18,6 +17,9 @@ const onCreateFailure = response => {
 
 const onIndexSuccess = response => {
   console.log(response)
+  const showRestaurantsHtml = showRestaurantsTemplate({ restaurants: response.restaurants })
+  $('.content').html(showRestaurantsHtml)
+  $('.content').show()
 }
 
 const onIndexFailure = response => {

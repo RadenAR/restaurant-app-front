@@ -1,0 +1,21 @@
+{{#each restaurants as |restaurant|}}
+  <section data-id="{{restaurant.id}}">
+    <h6>Name:</h6>
+    <h3>
+      {{restaurant.name}}
+    </h3>
+    <h6>Address:</h6>
+    <p>
+      {{restaurant.address}}
+    </p>
+    <h6>Rating:</h6>
+    <p>
+      {{restaurant.rating}}
+    </p>
+    <h6>Cuisine:</h6>
+    <p>
+      {{restaurant.cuisine_type}}
+    </p>
+  </section>
+
+{{/each}}

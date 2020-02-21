@@ -22,4 +22,5 @@ $(() => {
   $('#new-restaurant').hide()
   $('#index').on('submit', restaurantEvents.onIndex)
   $('#index').hide()
+  $('.content').hide()
 })
