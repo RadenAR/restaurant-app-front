@@ -23,4 +23,6 @@ $(() => {
   $('#index').on('submit', restaurantEvents.onIndex)
   $('#index').hide()
   $('.content').hide()
+  $('#clear-restaurants').on('click', restaurantEvents.onClear)
+  $('#clear-restaurants').hide()
 })

@@ -20,6 +20,7 @@ const onIndexSuccess = response => {
   const showRestaurantsHtml = showRestaurantsTemplate({ restaurants: response.restaurants })
   $('.content').html(showRestaurantsHtml)
   $('.content').show()
+  $('#clear-restaurants').show()
 }
 
 const onIndexFailure = response => {

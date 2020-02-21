@@ -20,7 +20,13 @@ const onIndex = event => {
     .catch(ui.onIndexFailure)
 }
 
+const onClear = () => {
+  $('.content').hide()
+  $('#clear-restaurants').hide()
+}
+
 module.exports = {
   onCreate,
-  onIndex
+  onIndex,
+  onClear
 }
