@@ -24,6 +24,9 @@ const onSignInSuccess = response => {
 
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+
+  $('#sign-out').show()
+  $('#change-pw').show()
 }
 
 const onSignInFailure = response => {
@@ -57,6 +60,10 @@ const onSignOutSuccess = () => {
 
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+
+  $('#sign-in').show()
+  $('#sign-out').hide()
+  $('#change-pw').hide()
 }
 
 const onSignOutFailure = () => {
