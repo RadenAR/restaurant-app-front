@@ -26,4 +26,7 @@ $(() => {
   $('#clear-restaurants').on('click', restaurantEvents.onClear)
   $('#clear-restaurants').hide()
   $('.content').on('click', '.remove-restaurant', restaurantEvents.onDelete)
+  $('.content').on('click', '.update-restaurant', restaurantEvents.showUpdate)
+  $('#update').hide()
+  $('#update').on('submit', restaurantEvents.onUpdate)
 })

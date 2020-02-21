@@ -82,7 +82,7 @@
                   <input type='submit' class="btn btn-primary alt-color" value='Create'>
               </div>
             </fieldset>
-        </form>
+          </form>
         </div>
 
         <div class="container text-center col-12">
@@ -96,6 +96,26 @@
         <button id='clear-restaurants' class="btn btn-primary">Clear</button>
 
         <div class="container col-12 content">
+        </div>
+
+        <div>
+          <form id='update'>
+            <fieldset>
+              <legend>Update Restaurant</legend>
+                <div class="form-group">
+                  <label>Name</label>
+                  <input type='text' class="form-control" name='restaurant[name]' placeholder='example'>
+                  <label>Address</label>
+                  <input type='text' class="form-control" name='restaurant[address]' placeholder='example'>
+                  <label>Rating</label>
+                  <input type='number' class="form-control" name='restaurant[rating]' placeholder='0'>
+                  <label>Cuisine Type</label>
+                  <input type='text' class="form-control" name='restaurant[cuisine_type]' placeholder='example'>
+                  <br>
+                  <input type='submit' class="btn btn-primary alt-color" value='Update'>
+              </div>
+            </fieldset>
+        </form>
         </div>
     </body>
 </html>

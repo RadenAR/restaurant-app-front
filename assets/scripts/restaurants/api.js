@@ -33,8 +33,20 @@ const deleteRestaurant = (id) => {
   })
 }
 
+const update = (data, id) => {
+  return $.ajax({
+    url: config.apiUrl + '/restaurants/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    data
+  })
+}
+
 module.exports = {
   create,
   index,
-  deleteRestaurant
+  deleteRestaurant,
+  update
 }

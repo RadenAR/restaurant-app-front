@@ -35,10 +35,28 @@ const onDeleteFailure = () => {
   $('#message').addClass('failure')
 }
 
+const onUpdateSuccess = () => {
+  $('#message').text(`Update Successful!`)
+
+  $('#message').removeClass('failure')
+  $('#message').addClass('success')
+
+  $('#update').hide()
+}
+
+const onUpdateFailure = () => {
+  $('#message').text('Update Failed')
+
+  $('#message').removeClass('success')
+  $('#message').addClass('failure')
+}
+
 module.exports = {
   onCreateSuccess,
   onCreateFailure,
   onIndexSuccess,
   onIndexFailure,
-  onDeleteFailure
+  onDeleteFailure,
+  onUpdateSuccess,
+  onUpdateFailure
 }
