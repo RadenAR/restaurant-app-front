@@ -2,7 +2,7 @@
 
 let apiUrl
 const apiUrls = {
-  production: 'https://raden-restaurant-app.herokuapp.com/',
+  production: 'https://raden-restaurant-app.herokuapp.com',
   development: 'http://localhost:4741'
 }
 

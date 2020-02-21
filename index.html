@@ -3,7 +3,6 @@
     <head>
       <title>Example</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
@@ -12,6 +11,53 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <form id='sign-up'>
+          <fieldset>
+            <legend>Sign Up!</legend>
+            <div class="form-group">
+              <label>Email</label>
+              <input type='email' class="form-control" name='credentials[email]' placeholder='example@address.com'>
+              <label>Password</label>
+              <input type='password' class="form-control" name='credentials[password]'  placeholder='*****'>
+              <label>Comfirm Password</label>
+              <input type='password' class="form-control" name='credentials[password_confirmation]'  placeholder='******'>
+              <br>
+              <input type='submit' class="btn btn-primary alt-color" value='Sign Up!'>
+            </div>
+          </fieldset>
+        </form>
+        <form id='sign-in'>
+          <fieldset>
+            <legend>Sign In</legend>
+              <div class="form-group">
+                <label>Email</label>
+                <input type='email' class="form-control" name='credentials[email]' placeholder='example@address.com'>
+                <label>Password</label>
+                <input type='password' class="form-control" name='credentials[password]'  placeholder='*****'>
+                <br>
+                <input type='submit' class="btn btn-primary alt-color" value='Sign In'>
+            </div>
+          </fieldset>
+      </form>
+      <form id='change-pw'>
+          <fieldset>
+            <legend>Change PW</legend>
+            <div class="form-group">
+              <label>Password</label>
+              <input type='password' class="form-control" name='credentials[password]'  placeholder='*****'>
+              <label>New Password</label>
+              <input type='password' class="form-control" name='credentials[new_password]'  placeholder='******'>
+              <br>
+              <input type='submit' class="btn btn-primary alt-color" value='Change'>
+            </div>
+          </fieldset>
+        </form>
+        <div class="container text-center col-12">
+          <form id='sign-out'>
+            <fieldset>
+              <input type='submit' class="btn btn-secondary" value='Sign Out'>
+            </fieldset>
+          </form>
+        </div>
     </body>
 </html>
