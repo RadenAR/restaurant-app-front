@@ -20,4 +20,5 @@ $(() => {
   // restaurant events
   $('#new-restaurant').on('submit', restaurantEvents.onCreate)
   $('#new-restaurant').hide()
+  $('#get-all').hide()
 })

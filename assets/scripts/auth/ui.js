@@ -29,6 +29,7 @@ const onSignInSuccess = response => {
   $('#change-pw').show()
 
   $('#new-restaurant').show()
+  $('#get-all').show()
 }
 
 const onSignInFailure = response => {
@@ -68,6 +69,7 @@ const onSignOutSuccess = () => {
   $('#change-pw').hide()
 
   $('#new-restaurant').hide()
+  $('#get-all').hide()
 }
 
 const onSignOutFailure = () => {
