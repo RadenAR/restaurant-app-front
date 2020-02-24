@@ -19,6 +19,11 @@ const onIndexSuccess = response => {
   $('.content').html(showRestaurantsHtml)
   $('.content').show()
   $('#clear-restaurants').show()
+
+  $('#message').text(`Retrieving Restaurants Successful!`)
+
+  $('#message').removeClass('failure')
+  $('#message').addClass('success')
 }
 
 const onIndexFailure = () => {
@@ -26,6 +31,13 @@ const onIndexFailure = () => {
 
   $('#message').removeClass('success')
   $('#message').addClass('failure')
+}
+
+const onDeleteSuccess = () => {
+  $('#message').text(`Deletion Successful!`)
+
+  $('#message').removeClass('failure')
+  $('#message').addClass('success')
 }
 
 const onDeleteFailure = () => {
@@ -57,6 +69,7 @@ module.exports = {
   onCreateFailure,
   onIndexSuccess,
   onIndexFailure,
+  onDeleteSuccess,
   onDeleteFailure,
   onUpdateSuccess,
   onUpdateFailure

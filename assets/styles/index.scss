@@ -1,11 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
 
-// .success {
-//   background-color: $limegreen;
-//   color: $white;
-// }
-//
-// .failure {
-//   background-color: $red;
-//   color: $white;
-// }
+$limegreen: #32cd32;
+
+.success {
+  background-color: $limegreen;
+  color: $white;
+}
+
+.failure {
+  background-color: $red;
+  color: $white;
+}

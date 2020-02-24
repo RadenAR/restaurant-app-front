@@ -33,6 +33,7 @@ const onDelete = event => {
   api.deleteRestaurant(id)
     .then(function () {
       onIndex(event)
+      ui.onDeleteSuccess()
     })
     .catch(ui.onDeleteFailure)
 }
