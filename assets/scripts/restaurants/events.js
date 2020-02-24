@@ -49,12 +49,13 @@ const showUpdate = event => {
   const healthy = data.find('.healthy').text()
 
   const updateRest = {
-    name: name.split(' ').join('').slice(1, -1),
-    address: address.split(' ').join('').slice(1, -1),
-    rating: rating.split(' ').join('').slice(1, -1),
-    cuisine: cuisine.split(' ').join('').slice(1, -1),
-    healthy: healthy
+    name: name.trim(),
+    address: address.trim(),
+    rating: rating.trim(),
+    cuisine: cuisine.trim(),
+    healthy: healthy.trim()
   }
+  console.log(updateRest)
 
   const id = store.toBeUpdated
 
