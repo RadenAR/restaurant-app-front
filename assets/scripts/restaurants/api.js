@@ -34,13 +34,16 @@ const deleteRestaurant = (id) => {
 }
 
 const update = (data, id) => {
+  const updatingData = {
+    restaurant: data
+  }
   return $.ajax({
     url: config.apiUrl + '/restaurants/' + id,
     method: 'PATCH',
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
-    data
+    data: updatingData
   })
 }
 
