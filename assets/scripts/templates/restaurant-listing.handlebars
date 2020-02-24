@@ -1,5 +1,25 @@
 {{#each restaurants as |restaurant|}}
   <section data-id="{{restaurant.id}}">
+    {{#if restaurant.editable}}
+    <h6>Name:</h6>
+    <h3 contenteditable='true' class='name'>
+      {{restaurant.name}}
+    </h3>
+    <h6>Address:</h6>
+    <p contenteditable='true' class='address'>
+      {{restaurant.address}}
+    </p>
+    <h6>Rating:</h6>
+    <p contenteditable='true' class='rating'>
+      {{restaurant.rating}}
+    </p>
+    <h6>Cuisine:</h6>
+    <p contenteditable='true' class='cuisine'>
+      {{restaurant.cuisine_type}}
+    </p>
+        <btn class='btn btn-danger remove-restaurant' data-id='{{restaurant.id}}'>Remove Restaurant</btn>
+        <btn class='btn btn-primary update-restaurant' data-id='{{restaurant.id}}'>Update Restaurant</btn>
+    {{else}}
     <h6>Name:</h6>
     <h3>
       {{restaurant.name}}
@@ -16,9 +36,6 @@
     <p>
       {{restaurant.cuisine_type}}
     </p>
-    {{#if restaurant.editable}}
-        <btn class='btn btn-danger remove-restaurant' data-id='{{restaurant.id}}'>Remove Restaurant</btn>
-        <btn class='btn btn-primary update-restaurant' data-id='{{restaurant.id}}'>Update Restaurant</btn>
     {{/if}}
   </section>
 
