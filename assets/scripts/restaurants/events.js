@@ -61,7 +61,7 @@ const showUpdate = event => {
 
   api.update(updateRest, id)
     .then(function () {
-      onIndex(event)
+      // onIndex(event)
       ui.onUpdateSuccess()
       store.toBeUpdated = null
     })
