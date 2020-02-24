@@ -37,12 +37,12 @@ const onDeleteFailure = () => {
 
 const onUpdateSuccess = () => {
   $('#message').text(`Update Successful!`)
-  $('#update').trigger('reset')
+  // $('#update').trigger('reset')
 
   $('#message').removeClass('failure')
   $('#message').addClass('success')
 
-  $('#update').hide()
+  // $('#update').hide()
 }
 
 const onUpdateFailure = () => {

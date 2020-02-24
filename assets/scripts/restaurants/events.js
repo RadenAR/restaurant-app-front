@@ -52,17 +52,11 @@ const showUpdate = event => {
     rating: rating.split(' ').join('').slice(1, -1),
     cuisine: cuisine.split(' ').join('').slice(1, -1)
   }
-  console.log(updateRest)
-}
+  // console.log(updateRest)
 
-const onUpdate = event => {
-  event.preventDefault()
-
-  const form = event.target
-  const data = getFormFields(form)
   const id = store.toBeUpdated
 
-  api.update(data, id)
+  api.update(updateRest, id)
     .then(function () {
       onIndex(event)
       ui.onUpdateSuccess()
@@ -71,11 +65,27 @@ const onUpdate = event => {
     .catch(ui.onUpdateFailure)
 }
 
+// const onUpdate = event => {
+//   event.preventDefault()
+//
+//   const form = event.target
+//   const data = getFormFields(form)
+//   const id = store.toBeUpdated
+//
+//   api.update(data, id)
+//     .then(function () {
+//       onIndex(event)
+//       ui.onUpdateSuccess()
+//       store.toBeUpdated = null
+//     })
+//     .catch(ui.onUpdateFailure)
+// }
+
 module.exports = {
   onCreate,
   onIndex,
   onClear,
   onDelete,
-  showUpdate,
-  onUpdate
+  showUpdate
+  // onUpdate
 }
