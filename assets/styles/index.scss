@@ -1,9 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
 
 $limegreen: #32cd32;
+$bluetext: #00f;
 
 h6 {
-  color: blue;
+  color: $bluetext;
 }
 
 .success {
