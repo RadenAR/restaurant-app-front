@@ -33,6 +33,10 @@ const onSignInSuccess = response => {
   $('#index').show()
 
   $('#sign-up').hide()
+
+  $('#index-reso').show()
+
+  $('#new-reso').show()
 }
 
 const onSignInFailure = response => {
@@ -80,6 +84,11 @@ const onSignOutSuccess = () => {
 
   $('#new-restaurant').trigger('reset')
   $('#update').trigger('reset')
+
+  $('#index-reso').hide()
+  $('#clear-reso').hide()
+
+  $('#new-reso').hide()
 }
 
 const onSignOutFailure = () => {

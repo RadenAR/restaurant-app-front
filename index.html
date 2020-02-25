@@ -67,28 +67,74 @@
 
 
         <div class='container'>
-          <form id='new-restaurant' class="col-4">
-            <fieldset>
-              <legend>New Restaurant</legend>
-                <div class="form-group">
-                  <label>Name</label>
-                  <input type='text' class="form-control" name='restaurant[name]' placeholder='example' required>
-                  <label>Address</label>
-                  <input type='text' class="form-control" name='restaurant[address]' placeholder='example' required>
-                  <label>Rating</label>
-                  <input type='number' class="form-control" name='restaurant[rating]' placeholder='0' required>
-                  <label>Cuisine Type</label>
-                  <input type='text' class="form-control" name='restaurant[cuisine_type]' placeholder='example' required>
-                  <label>Healthy</label>
-                  <select class='form-control' name='restaurant[healthy]' required>
-                    <option value='true'>&#128077;</option>
-                    <option value='false'>&#128078;</option>
-                  </select>
-                  <br>
-                  <input type='submit' class="btn btn-primary alt-color" value='Create'>
-              </div>
-            </fieldset>
-          </form>
+          <div class='row'>
+            <form id='new-restaurant' class="col-5">
+              <fieldset>
+                <legend>New Restaurant</legend>
+                  <div class="form-group">
+                    <label>Name</label>
+                    <input type='text' class="form-control" name='restaurant[name]' placeholder='example' required>
+                    <label>Address</label>
+                    <input type='text' class="form-control" name='restaurant[address]' placeholder='example' required>
+                    <label>Rating</label>
+                    <input type='number' class="form-control" name='restaurant[rating]' placeholder='0' required>
+                    <label>Cuisine Type</label>
+                    <input type='text' class="form-control" name='restaurant[cuisine_type]' placeholder='example' required>
+                    <label>Healthy</label>
+                    <select class='form-control' name='restaurant[healthy]' required>
+                      <option value='true'>&#128077;</option>
+                      <option value='false'>&#128078;</option>
+                    </select>
+                    <br>
+                    <input type='submit' class="btn btn-primary alt-color" value='Create'>
+                </div>
+              </fieldset>
+            </form>
+
+            <div class='col-2'>
+            </div>
+
+            <form id='new-reso' class="col-5">
+              <fieldset>
+                <legend>New Reservation</legend>
+                  <div class="form-group">
+                    <label>Guests</label>
+                    <input type='text' class="form-control" name='reservation[people]' placeholder='example' required>
+                    <label>Date</label>
+                    <input type='text' class="form-control" name='reservation[date]' placeholder='example' required>
+                    <label>Time</label>
+                    <input type='text' class="form-control" name='reservation[time]' placeholder='example' required>
+                    <label>Restaurant Number</label>
+                    <input type='text' class="form-control" name='reservation[restaurant_id]' placeholder='example' required>
+                    <br>
+                    <input type='submit' class="btn btn-primary alt-color" value='Create'>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+
+        <div class="container text-center col-12">
+          <div class='row'>
+            <div class='col-8'>
+            </div>
+            <div class='col-2'>
+              <form id='index-reso'>
+                <fieldset>
+                  <input type='submit' class="btn btn-primary" value='Get All Reservations'>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class='container'>
+          <button id='clear-reso' class="btn btn-secondary col-2">Clear</button>
+        </div>
+  <br>
+  <br>
+
+        <div class="container reso-content">
         </div>
 
         <div class="container text-center col-12">

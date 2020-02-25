@@ -2,6 +2,7 @@
 
 const authEvents = require('./auth/events')
 const restaurantEvents = require('./restaurants/events')
+const reservationEvents = require('./reservations/events')
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
@@ -29,4 +30,16 @@ $(() => {
   $('.content').on('click', '.update-restaurant', restaurantEvents.showUpdate)
   $('#update').hide()
   $('#update').on('submit', restaurantEvents.onUpdate)
+
+  // reservation events
+  $('#index-reso').hide()
+  $('#index-reso').on('submit', reservationEvents.onIndexReso)
+  $('#clear-reso').hide()
+  $('#new-reso').hide()
+
+  $('#new-reso').on('submit', reservationEvents.onCreateReso)
+
+  $('#clear-reso').on('click', reservationEvents.onClearReso)
+
+  $('.reso-content').on('click', '.remove-reso', reservationEvents.onDeleteReso)
 })
