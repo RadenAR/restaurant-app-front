@@ -12,6 +12,9 @@ const onIndexResoSuccess = response => {
 
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+
+  $('.content').hide()
+  $('#clear-restaurants').hide()
 }
 
 const onIndexResoFailure = () => {

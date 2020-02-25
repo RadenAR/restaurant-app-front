@@ -24,6 +24,9 @@ const onIndexSuccess = response => {
 
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+
+  $('#clear-reso').hide()
+  $('.reso-content').hide()
 }
 
 const onIndexFailure = () => {
