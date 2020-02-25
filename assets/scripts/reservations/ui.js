@@ -15,6 +15,7 @@ const onIndexResoSuccess = response => {
 
   $('.content').hide()
   $('#clear-restaurants').hide()
+  clearMessage()
 }
 
 const onIndexResoFailure = () => {
@@ -22,6 +23,7 @@ const onIndexResoFailure = () => {
 
   $('#message').removeClass('success')
   $('#message').addClass('failure')
+  clearMessage()
 }
 
 const onCreateResoSuccess = response => {
@@ -29,6 +31,12 @@ const onCreateResoSuccess = response => {
   $('#new-reso').trigger('reset')
   $('#message2').removeClass('failure')
   $('#message2').addClass('success')
+
+  setTimeout(function () {
+    $('#message2').text('')
+    $('#message2').removeClass('failure')
+    $('#message2').removeClass('success')
+  }, 5000)
 }
 
 const onCreateResoFailure = () => {
@@ -36,6 +44,12 @@ const onCreateResoFailure = () => {
 
   $('#message2').removeClass('success')
   $('#message2').addClass('failure')
+
+  setTimeout(function () {
+    $('#message2').text('')
+    $('#message2').removeClass('failure')
+    $('#message2').removeClass('success')
+  }, 5000)
 }
 
 const onDeleteResoSuccess = () => {
@@ -43,6 +57,7 @@ const onDeleteResoSuccess = () => {
 
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+  clearMessage()
 }
 
 const onDeleteResoFailure = () => {
@@ -50,6 +65,15 @@ const onDeleteResoFailure = () => {
 
   $('#message').removeClass('success')
   $('#message').addClass('failure')
+  clearMessage()
+}
+
+const clearMessage = () => {
+  setTimeout(function () {
+    $('#message').text('')
+    $('#message').removeClass('failure')
+    $('#message').removeClass('success')
+  }, 5000)
 }
 
 module.exports = {

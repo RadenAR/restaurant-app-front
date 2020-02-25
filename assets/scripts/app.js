@@ -44,4 +44,7 @@ $(() => {
   $('.reso-content').on('click', '.remove-reso', reservationEvents.onDeleteReso)
 
   $('.content').on('click', '.make-reso', reservationEvents.onMakeReso)
+
+  $('#newrest').on('submit', restaurantEvents.onNewRest)
+  $('#newrest').hide()
 })

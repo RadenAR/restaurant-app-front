@@ -67,6 +67,10 @@ const showUpdate = event => {
     .catch(ui.onUpdateFailure)
 }
 
+const onNewRest = event => {
+  event.preventDefault()
+}
+
 // const onUpdate = event => {
 //   event.preventDefault()
 //
@@ -88,6 +92,7 @@ module.exports = {
   onIndex,
   onClear,
   onDelete,
-  showUpdate
+  showUpdate,
   // onUpdate
+  onNewRest
 }
