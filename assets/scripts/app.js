@@ -47,4 +47,7 @@ $(() => {
 
   $('#newrest').on('submit', restaurantEvents.onNewRest)
   $('#newrest').hide()
+
+  $('.content').on('keydown', '.rating', restaurantEvents.checkNumber)
+  // $('.content').on('keydown', '.healthy', restaurantEvents.checkBool)
 })
