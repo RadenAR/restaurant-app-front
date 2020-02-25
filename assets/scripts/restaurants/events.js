@@ -88,11 +88,9 @@ const onNewRest = event => {
 // }
 
 const checkNumber = event => {
-  if (event.key !== 'Backspace' && event.key !== '1' && event.key !== '2' && event.key !== '3' && event.key !== '4' && event.key !== '5' && event.key !== '6' && event.key !== '7' && event.key !== '8' && event.key !== '9' && event.key !== '0' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && $(event.target).text().trim().length === 0) {
+  if (event.key !== 'Backspace' && event.key !== '1' && event.key !== '2' && event.key !== '3' && event.key !== '4' && event.key !== '5' && event.key !== '0' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && $(event.target).text().trim().length === 0) {
     event.preventDefault()
-  } else if ($(event.target).text().trim().length === 1 && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== '0') {
-    event.preventDefault()
-  } else if ($(event.target).text().trim().length > 1 && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') {
+  } else if ($(event.target).text().trim().length > 0 && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') {
     event.preventDefault()
   }
 }
