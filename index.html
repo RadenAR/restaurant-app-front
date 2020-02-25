@@ -11,6 +11,40 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+
+      <!-- Modal -->
+      <div class="modal fade" id="reso-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New Reservation</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h5 id='message2' class = 'col-12'></h5>
+              <form id='new-reso' class="col-5">
+                <fieldset>
+                    <div class="form-group">
+                      <label>Guests</label>
+                      <input type='text' class="form-control" name='reservation[people]' placeholder='example' required>
+                      <label>Date</label>
+                      <input type='date' class="form-control" name='reservation[date]' placeholder='example' required>
+                      <label>Time</label>
+                      <input type='time' class="form-control" name='reservation[time]' placeholder='example'>
+                      <!-- <label>Restaurant Number</label>
+                      <input type='number' class="form-control" name='reservation[restaurant_id]' placeholder='0' required> -->
+                      <br>
+                      <input type='submit' class="btn btn-primary alt-color" value='Create'>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="container">
         <div class="row">
           <h1 id='message' class = 'col-12'></h1>
@@ -94,7 +128,7 @@
             <div class='col-2'>
             </div>
 
-            <form id='new-reso' class="col-5">
+            <!-- <form id='new-reso' class="col-5">
               <fieldset>
                 <legend>New Reservation</legend>
                   <div class="form-group">
@@ -110,7 +144,7 @@
                     <input type='submit' class="btn btn-primary alt-color" value='Create'>
                 </div>
               </fieldset>
-            </form>
+            </form> -->
           </div>
         </div>
 

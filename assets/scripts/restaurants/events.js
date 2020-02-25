@@ -55,7 +55,6 @@ const showUpdate = event => {
     cuisine: cuisine.trim(),
     healthy: healthy.trim()
   }
-  console.log(updateRest)
 
   const id = store.toBeUpdated
 

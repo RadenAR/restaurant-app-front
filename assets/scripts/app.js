@@ -42,4 +42,6 @@ $(() => {
   $('#clear-reso').on('click', reservationEvents.onClearReso)
 
   $('.reso-content').on('click', '.remove-reso', reservationEvents.onDeleteReso)
+
+  $('.content').on('click', '.make-reso', reservationEvents.onMakeReso)
 })

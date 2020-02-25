@@ -15,6 +15,7 @@ const indexReso = () => {
 
 const createReso = data => {
   data.user_id = store.user.id
+  data.reservation.restaurant_id = store.restid
   return $.ajax({
     url: config.apiUrl + '/reservations',
     method: 'POST',

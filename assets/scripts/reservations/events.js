@@ -2,6 +2,7 @@
 
 const api = require('./api')
 const ui = require('./ui')
+const store = require('../store')
 const getFormFields = require('../../../lib/get-form-fields')
 
 const onIndexReso = event => {
@@ -32,7 +33,6 @@ const onClearReso = event => {
 const onDeleteReso = event => {
   event.preventDefault()
   const id = $(event.target).data('id')
-  console.log(event)
   api.deleteReso(id)
     .then(function () {
       onIndexReso(event)
@@ -41,9 +41,18 @@ const onDeleteReso = event => {
     .catch(ui.onDeleteResoFailure)
 }
 
+const onMakeReso = event => {
+  event.preventDefault()
+  store.restid = $(event.target).data('id')
+  $('#message2').text('')
+  $('#message2').removeClass('success')
+  $('#message2').removeClass('failure')
+}
+
 module.exports = {
   onIndexReso,
   onCreateReso,
   onClearReso,
-  onDeleteReso
+  onDeleteReso,
+  onMakeReso
 }

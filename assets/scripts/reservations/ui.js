@@ -3,7 +3,6 @@
 const showResoTemplate = require('../templates/reservation-listing.handlebars')
 
 const onIndexResoSuccess = response => {
-  console.log(response)
   const showResoHtml = showResoTemplate({ reservations: response.reservations })
   $('.reso-content').html(showResoHtml)
   $('.reso-content').show()
@@ -23,17 +22,17 @@ const onIndexResoFailure = () => {
 }
 
 const onCreateResoSuccess = response => {
-  $('#message').text(`Reservation successfully added!`)
+  $('#message2').text(`Reservation successfully added!`)
   $('#new-reso').trigger('reset')
-  $('#message').removeClass('failure')
-  $('#message').addClass('success')
+  $('#message2').removeClass('failure')
+  $('#message2').addClass('success')
 }
 
 const onCreateResoFailure = () => {
-  $('#message').text('Creation Failed')
+  $('#message2').text('Creation Failed')
 
-  $('#message').removeClass('success')
-  $('#message').addClass('failure')
+  $('#message2').removeClass('success')
+  $('#message2').addClass('failure')
 }
 
 const onDeleteResoSuccess = () => {
