@@ -96,13 +96,36 @@ const checkNumber = event => {
     event.preventDefault()
   }
 }
-// const checkBool = event => {
-//   console.log($(event.target).text().trim())
-//   console.log(event.key)
-//   if (event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') {
-//     event.preventDefault()
-//   }
-// }
+const checkBool = event => {
+  // for true
+  if ($(event.target).text().trim().length === 0 && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 't' && event.key !== 'f') {
+    event.preventDefault()
+  } else if ($(event.target).text().trim().length === 1 && $(event.target).text().trim() === 't' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 'r') {
+    event.preventDefault()
+  } else if ($(event.target).text().trim().length === 2 && $(event.target).text().trim() === 'tr' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 'u') {
+    event.preventDefault()
+  } else if ($(event.target).text().trim().length === 3 && $(event.target).text().trim() === 'tru' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 'e') {
+    event.preventDefault()
+  } else if ($(event.target).text().trim().length === 4 && $(event.target).text().trim() === 'true' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') {
+    event.preventDefault()
+  } else if ($(event.target).text().trim().length > 4 && $(event.target).text().trim() === 't' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') {
+    event.preventDefault()
+  }
+  // for false
+  if ($(event.target).text().trim().length === 0 && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 't' && event.key !== 'f') {
+    event.preventDefault()
+  } else if ($(event.target).text().trim().length === 1 && $(event.target).text().trim() === 'f' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 'a') {
+    event.preventDefault()
+  } else if ($(event.target).text().trim().length === 2 && $(event.target).text().trim() === 'fa' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 'l') {
+    event.preventDefault()
+  } else if ($(event.target).text().trim().length === 3 && $(event.target).text().trim() === 'fal' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 's') {
+    event.preventDefault()
+  } else if ($(event.target).text().trim().length === 4 && $(event.target).text().trim() === 'fals' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 'e') {
+    event.preventDefault()
+  } else if ($(event.target).text().trim().length > 4 && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') {
+    event.preventDefault()
+  }
+}
 
 module.exports = {
   onCreate,
