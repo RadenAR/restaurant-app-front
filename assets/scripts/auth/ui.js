@@ -8,6 +8,7 @@ const onSignUpSuccess = response => {
 
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+  clearMessage()
 }
 const onSignUpFailure = response => {
   $('#message').text('Sign up failed')
@@ -15,6 +16,7 @@ const onSignUpFailure = response => {
 
   $('#message').removeClass('success')
   $('#message').addClass('failure')
+  clearMessage()
 }
 
 const onSignInSuccess = response => {
@@ -33,6 +35,12 @@ const onSignInSuccess = response => {
   $('#index').show()
 
   $('#sign-up').hide()
+
+  $('#index-reso').show()
+
+  $('#new-reso').show()
+  $('#newrest').show()
+  clearMessage()
 }
 
 const onSignInFailure = response => {
@@ -41,6 +49,7 @@ const onSignInFailure = response => {
 
   $('#message').removeClass('success')
   $('#message').addClass('failure')
+  clearMessage()
 }
 
 const onChangeSuccess = () => {
@@ -49,6 +58,7 @@ const onChangeSuccess = () => {
 
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+  clearMessage()
 }
 
 const onChangeFailure = () => {
@@ -57,6 +67,7 @@ const onChangeFailure = () => {
 
   $('#message').removeClass('success')
   $('#message').addClass('failure')
+  clearMessage()
 }
 
 const onSignOutSuccess = () => {
@@ -80,6 +91,13 @@ const onSignOutSuccess = () => {
 
   $('#new-restaurant').trigger('reset')
   $('#update').trigger('reset')
+
+  $('#index-reso').hide()
+  $('#clear-reso').hide()
+
+  $('#new-reso').hide()
+  $('#newrest').hide()
+  clearMessage()
 }
 
 const onSignOutFailure = () => {
@@ -87,6 +105,15 @@ const onSignOutFailure = () => {
 
   $('#message').removeClass('success')
   $('#message').addClass('failure')
+  clearMessage()
+}
+
+const clearMessage = () => {
+  setTimeout(function () {
+    $('#message').text('')
+    $('#message').removeClass('failure')
+    $('#message').removeClass('success')
+  }, 5000)
 }
 
 module.exports = {

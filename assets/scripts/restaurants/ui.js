@@ -2,16 +2,26 @@
 const showRestaurantsTemplate = require('../templates/restaurant-listing.handlebars')
 
 const onCreateSuccess = response => {
-  $('#message').text(`${response.restaurant.name} successfully added!`)
+  $('#message3').text(`${response.restaurant.name} successfully added!`)
   $('#new-restaurant').trigger('reset')
-  $('#message').removeClass('failure')
-  $('#message').addClass('success')
+  $('#message3').removeClass('failure')
+  $('#message3').addClass('success')
+  setTimeout(function () {
+    $('#message3').text('')
+    $('#message3').removeClass('failure')
+    $('#message3').removeClass('success')
+  }, 5000)
 }
 const onCreateFailure = () => {
-  $('#message').text('Creation Failure')
+  $('#message3').text('Creation Failure')
 
-  $('#message').removeClass('success')
-  $('#message').addClass('failure')
+  $('#message3').removeClass('success')
+  $('#message3').addClass('failure')
+  setTimeout(function () {
+    $('#message3').text('')
+    $('#message3').removeClass('failure')
+    $('#message3').removeClass('success')
+  }, 5000)
 }
 
 const onIndexSuccess = response => {
@@ -24,6 +34,10 @@ const onIndexSuccess = response => {
 
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+
+  $('#clear-reso').hide()
+  $('.reso-content').hide()
+  clearMessage()
 }
 
 const onIndexFailure = () => {
@@ -31,6 +45,7 @@ const onIndexFailure = () => {
 
   $('#message').removeClass('success')
   $('#message').addClass('failure')
+  clearMessage()
 }
 
 const onDeleteSuccess = () => {
@@ -38,6 +53,7 @@ const onDeleteSuccess = () => {
 
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+  clearMessage()
 }
 
 const onDeleteFailure = () => {
@@ -45,6 +61,7 @@ const onDeleteFailure = () => {
 
   $('#message').removeClass('success')
   $('#message').addClass('failure')
+  clearMessage()
 }
 
 const onUpdateSuccess = () => {
@@ -54,6 +71,8 @@ const onUpdateSuccess = () => {
   $('#message').removeClass('failure')
   $('#message').addClass('success')
 
+  clearMessage()
+
   // $('#update').hide()
 }
 
@@ -62,6 +81,15 @@ const onUpdateFailure = () => {
 
   $('#message').removeClass('success')
   $('#message').addClass('failure')
+  clearMessage()
+}
+
+const clearMessage = () => {
+  setTimeout(function () {
+    $('#message').text('')
+    $('#message').removeClass('failure')
+    $('#message').removeClass('success')
+  }, 5000)
 }
 
 module.exports = {

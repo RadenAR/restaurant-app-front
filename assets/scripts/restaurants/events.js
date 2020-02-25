@@ -55,7 +55,6 @@ const showUpdate = event => {
     cuisine: cuisine.trim(),
     healthy: healthy.trim()
   }
-  console.log(updateRest)
 
   const id = store.toBeUpdated
 
@@ -66,6 +65,10 @@ const showUpdate = event => {
       store.toBeUpdated = null
     })
     .catch(ui.onUpdateFailure)
+}
+
+const onNewRest = event => {
+  event.preventDefault()
 }
 
 // const onUpdate = event => {
@@ -89,6 +92,7 @@ module.exports = {
   onIndex,
   onClear,
   onDelete,
-  showUpdate
+  showUpdate,
   // onUpdate
+  onNewRest
 }

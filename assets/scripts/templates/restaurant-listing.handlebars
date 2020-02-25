@@ -1,3 +1,5 @@
+<br>
+<br>
 <div class='row'>
   {{#each restaurants as |restaurant|}}
     <section data-id="{{restaurant.id}}" class='col-6'>
@@ -22,8 +24,9 @@
       <p contenteditable='true' class='healthy col-4'>
         {{restaurant.healthy}}
       </p>
-          <btn class='btn btn-danger remove-restaurant' data-id='{{restaurant.id}}'>Remove Restaurant</btn>
+          <btn class='btn btn-primary make-reso' data-id='{{restaurant.id}}' data-toggle="modal" data-target="#reso-modal">Make reservation</btn>
           <btn class='btn btn-primary update-restaurant' data-id='{{restaurant.id}}'>Update Restaurant</btn>
+          <btn class='btn btn-danger remove-restaurant' data-id='{{restaurant.id}}'>Remove Restaurant</btn>
         <br>
         <br>
         <br>
@@ -49,6 +52,7 @@
       <p>
         {{restaurant.healthy}}
       </p>
+      <btn class='btn btn-primary make-reso' data-id='{{restaurant.id}}'>Make reservation</btn>
         <br>
         <br>
         <br>
