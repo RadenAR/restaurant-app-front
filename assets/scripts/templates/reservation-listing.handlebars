@@ -3,6 +3,7 @@
 <div class='row'>
   {{#each reservations as |reservation|}}
     <section data-id="{{reservation.id}}" class='col-6'>
+      {{#if reservation.editable}}
       <h6>Restaurant:</h6>
       <h3 class='col-4'>
         {{reservation.restaurant.name}}
@@ -23,5 +24,6 @@
         <br>
         <br>
       </section>
+      {{/if}}
     {{/each}}
   </div>
