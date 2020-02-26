@@ -41,6 +41,8 @@ const onSignInSuccess = response => {
   $('#new-reso').show()
   $('#newrest').show()
   clearMessage()
+
+  $('.picture').show()
 }
 
 const onSignInFailure = response => {
@@ -98,6 +100,8 @@ const onSignOutSuccess = () => {
   $('#new-reso').hide()
   $('#newrest').hide()
   clearMessage()
+
+  $('.picture').hide()
 }
 
 const onSignOutFailure = () => {

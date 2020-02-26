@@ -50,4 +50,6 @@ $(() => {
 
   $('.content').on('keydown', '.rating', restaurantEvents.checkNumber)
   $('.content').on('keydown', '.healthy', restaurantEvents.checkBool)
+
+  $('.picture').hide()
 })
