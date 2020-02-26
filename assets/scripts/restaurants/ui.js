@@ -12,6 +12,7 @@ const onCreateSuccess = response => {
     $('#message3').removeClass('success')
   }, 5000)
 }
+
 const onCreateFailure = () => {
   $('#message3').text('Creation Failure')
 
