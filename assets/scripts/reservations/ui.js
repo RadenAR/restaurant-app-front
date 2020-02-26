@@ -1,6 +1,7 @@
 'use strict'
 
 const showResoTemplate = require('../templates/reservation-listing.handlebars')
+const store = require('../store')
 
 const onIndexResoSuccess = response => {
   const showResoHtml = showResoTemplate({ reservations: response.reservations })
@@ -16,6 +17,7 @@ const onIndexResoSuccess = response => {
   $('.content').hide()
   $('#clear-restaurants').hide()
   clearMessage()
+  store.restaurantContent = false
 }
 
 const onIndexResoFailure = () => {

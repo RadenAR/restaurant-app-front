@@ -25,6 +25,7 @@ const onClear = event => {
   event.preventDefault()
   $('.content').hide()
   $('#clear-restaurants').hide()
+  store.restaurantContent = false
 }
 
 const onDelete = event => {

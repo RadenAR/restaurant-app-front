@@ -1,5 +1,7 @@
 'use strict'
 const showRestaurantsTemplate = require('../templates/restaurant-listing.handlebars')
+const store = require('../store')
+const api = require('./api')
 
 const onCreateSuccess = response => {
   $('#message3').text(`${response.restaurant.name} successfully added!`)
@@ -11,6 +13,13 @@ const onCreateSuccess = response => {
     $('#message3').removeClass('failure')
     $('#message3').removeClass('success')
   }, 5000)
+  // $('.content').hide()
+  // $('#clear-restaurants').hide()
+  if (store.restaurantContent) {
+    api.index()
+      .then(onIndexSuccess)
+      .catch(onIndexFailure)
+  }
 }
 
 const onCreateFailure = () => {
@@ -39,6 +48,7 @@ const onIndexSuccess = response => {
   $('#clear-reso').hide()
   $('.reso-content').hide()
   clearMessage()
+  store.restaurantContent = true
 }
 
 const onIndexFailure = () => {
