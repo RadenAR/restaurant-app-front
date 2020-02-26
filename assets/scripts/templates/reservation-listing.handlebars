@@ -2,22 +2,22 @@
 <br>
 <div class='row'>
   {{#each reservations as |reservation|}}
+  {{#if reservation.editable}}
     <section data-id="{{reservation.id}}" class='col-6'>
-      {{#if reservation.editable}}
       <h6>Restaurant:</h6>
-      <h3 class='col-4'>
+      <h3>
         {{reservation.restaurant.name}}
       </h3>
       <h6>Guests:</h6>
-      <p class='col-4'>
+      <p>
         {{reservation.people}}
       </p>
       <h6>Date:</h6>
-      <p class='col-4'>
+      <p>
         {{date reservation.date}}
       </p>
       <h6>Time:</h6>
-      <p class='col-4'>
+      <p>
         {{time reservation.time}}
       </p>
           <btn class='btn btn-danger remove-reso' data-id='{{reservation.id}}'>Remove Reservation</btn>
