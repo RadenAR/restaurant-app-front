@@ -2,6 +2,7 @@
 w/ Authentication
 
 ## Instructions
+
 To try-out the live version click this link:
 [Restaurant App](https://radenar.github.io/restaurant-app-front/)
 
@@ -79,9 +80,10 @@ Back-end:
 * As a user, I want to be able to see all reservations.
 * As a user, I want to be able to delete a reservation.
 
-## Possible future additions
+## Possible future additions/ Unsolved problems
 * Ability to edit reservations
 * Ability to get one specific restaurant (possibly using search by name functionality)
+* Displaying healthy as emojis but allow it to be editable to true/false inline
 
 ## Links to Repositories
 [Front-end](https://github.com/RadenAR/restaurant-app-front)
