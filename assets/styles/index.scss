@@ -16,3 +16,13 @@ h6 {
   background-color: $red;
   color: $white;
 }
+
+@media (max-width: 599px) {
+  .action {
+    margin: 5px;
+  }
+
+  .sign-out {
+    margin-bottom: 15px;
+  }
+}

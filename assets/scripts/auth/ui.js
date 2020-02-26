@@ -102,6 +102,8 @@ const onSignOutSuccess = () => {
   clearMessage()
 
   $('.picture').hide()
+
+  $('.reso-content').hide()
 }
 
 const onSignOutFailure = () => {
