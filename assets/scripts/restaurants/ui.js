@@ -13,8 +13,7 @@ const onCreateSuccess = response => {
     $('#message3').removeClass('failure')
     $('#message3').removeClass('success')
   }, 5000)
-  // $('.content').hide()
-  // $('#clear-restaurants').hide()
+
   if (store.restaurantContent) {
     api.index()
       .then(onIndexSuccess)
@@ -77,14 +76,11 @@ const onDeleteFailure = () => {
 
 const onUpdateSuccess = () => {
   $('#message').text(`Update Successful!`)
-  // $('#update').trigger('reset')
 
   $('#message').removeClass('failure')
   $('#message').addClass('success')
 
   clearMessage()
-
-  // $('#update').hide()
 }
 
 const onUpdateFailure = () => {

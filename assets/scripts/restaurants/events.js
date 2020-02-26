@@ -72,22 +72,6 @@ const onNewRest = event => {
   event.preventDefault()
 }
 
-// const onUpdate = event => {
-//   event.preventDefault()
-//
-//   const form = event.target
-//   const data = getFormFields(form)
-//   const id = store.toBeUpdated
-//
-//   api.update(data, id)
-//     .then(function () {
-//       onIndex(event)
-//       ui.onUpdateSuccess()
-//       store.toBeUpdated = null
-//     })
-//     .catch(ui.onUpdateFailure)
-// }
-
 const checkNumber = event => {
   if (event.key !== 'Backspace' && event.key !== '1' && event.key !== '2' && event.key !== '3' && event.key !== '4' && event.key !== '5' && event.key !== '0' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && $(event.target).text().trim().length === 0) {
     event.preventDefault()
@@ -132,7 +116,6 @@ module.exports = {
   onClear,
   onDelete,
   showUpdate,
-  // onUpdate
   onNewRest,
   checkNumber,
   checkBool
