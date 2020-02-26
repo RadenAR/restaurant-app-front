@@ -38,7 +38,6 @@ grunt deploy
 18. Handlebars file was made to display the reservations.
 19. Added styling and an image to the application as a whole.
 
-CHANGE THE FOLLOWING!!!!!!!!!!!!!!!!!!!
 ## Problem solving strategy
 * What is the error?
 * What function is causing the error? If unsure, start from the index.html and move down the chain (app.js, events.js, api.js, ui.js)
@@ -63,7 +62,7 @@ Back-end:
 * [Postgres](https://www.postgresql.org/)
 
 ## WireFrames
-![alt text](https://i.imgur.com/NeS7VJM.png "Wireframes")
+![alt text](https://i.imgur.com/Km81bAi.png "Wireframes")
 
 ## User Stories
 * As a user, I want to be able to sign in.
@@ -79,10 +78,6 @@ Back-end:
 * As a user, I want to be able to add a reservation.
 * As a user, I want to be able to see all reservations.
 * As a user, I want to be able to delete a reservation.
-
-## Unsolved Problems (that will be fixed in the future iterations)
-* Updating list on creating a new restaurant
-
 
 ## Possible future additions
 * Ability to edit reservations
