@@ -75,20 +75,17 @@ const onDeleteFailure = () => {
 }
 
 const onUpdateSuccess = () => {
-  $('#message').text(`Update Successful!`)
+  $('.message4').text(`Update Successful!`)
 
-  $('#message').removeClass('failure')
-  $('#message').addClass('success')
-
-  clearMessage()
+  $('.message4').removeClass('failure')
+  $('.message4').addClass('success')
 }
 
 const onUpdateFailure = () => {
-  $('#message').text('Update Failed')
+  $('.message4').text('Update Failed')
 
-  $('#message').removeClass('success')
-  $('#message').addClass('failure')
-  clearMessage()
+  $('.message4').removeClass('success')
+  $('.message4').addClass('failure')
 }
 
 const clearMessage = () => {
