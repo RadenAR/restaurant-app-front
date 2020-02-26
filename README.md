@@ -81,7 +81,7 @@ Back-end:
 * As a user, I want to be able to delete a reservation.
 
 ## Unsolved Problems (that will be fixed in the future iterations)
-* formatting date and time properly for reservations
+* Updating list on creating a new restaurant
 
 
 ## Possible future additions
@@ -90,6 +90,7 @@ Back-end:
 
 ## Links to Repositories
 [Front-end](https://github.com/RadenAR/restaurant-app-front)
+
 [Back-end](https://github.com/RadenAR/restaurant-app-back)
 
 ## Author
