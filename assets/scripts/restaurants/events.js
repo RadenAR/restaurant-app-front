@@ -73,39 +73,98 @@ const onNewRest = event => {
 }
 
 const checkNumber = event => {
-  if (event.key !== 'Backspace' && event.key !== '1' && event.key !== '2' && event.key !== '3' && event.key !== '4' && event.key !== '5' && event.key !== '0' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && $(event.target).text().trim().length === 0) {
+  if (event.key !== 'Backspace' && event.key !== '1' &&
+      event.key !== '2' && event.key !== '3' &&
+      event.key !== '4' && event.key !== '5' &&
+      event.key !== '0' && event.key !== 'ArrowRight' &&
+      event.key !== 'ArrowLeft' && $(event.target).text().trim().length === 0) {
     event.preventDefault()
-  } else if ($(event.target).text().trim().length > 0 && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') {
+  } else if ($(event.target).text().trim().length > 0 &&
+             event.key !== 'Backspace' &&
+             event.key !== 'ArrowRight' &&
+             event.key !== 'ArrowLeft') {
     event.preventDefault()
   }
 }
 const checkBool = event => {
   // for true
-  if ($(event.target).text().trim().length === 0 && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 't' && event.key !== 'f') {
+  if ($(event.target).text().trim().length === 0 &&
+      event.key !== 'Backspace' && event.key !== 'ArrowRight' &&
+      event.key !== 'ArrowLeft' && event.key !== 't' &&
+      event.key !== 'f') {
     event.preventDefault()
-  } else if ($(event.target).text().trim().length === 1 && $(event.target).text().trim() === 't' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 'r') {
+  } else if ($(event.target).text().trim().length === 1 &&
+             $(event.target).text().trim() === 't' &&
+             event.key !== 'Backspace' &&
+             event.key !== 'ArrowRight' &&
+             event.key !== 'ArrowLeft' &&
+             event.key !== 'r') {
     event.preventDefault()
-  } else if ($(event.target).text().trim().length === 2 && $(event.target).text().trim() === 'tr' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 'u') {
+  } else if ($(event.target).text().trim().length === 2 &&
+             $(event.target).text().trim() === 'tr' &&
+             event.key !== 'Backspace' &&
+             event.key !== 'ArrowRight' &&
+             event.key !== 'ArrowLeft' &&
+             event.key !== 'u') {
     event.preventDefault()
-  } else if ($(event.target).text().trim().length === 3 && $(event.target).text().trim() === 'tru' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 'e') {
+  } else if ($(event.target).text().trim().length === 3 &&
+             $(event.target).text().trim() === 'tru' &&
+             event.key !== 'Backspace' &&
+             event.key !== 'ArrowRight' &&
+             event.key !== 'ArrowLeft' &&
+             event.key !== 'e') {
     event.preventDefault()
-  } else if ($(event.target).text().trim().length === 4 && $(event.target).text().trim() === 'true' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') {
+  } else if ($(event.target).text().trim().length === 4 &&
+             $(event.target).text().trim() === 'true' &&
+             event.key !== 'Backspace' &&
+             event.key !== 'ArrowRight' &&
+             event.key !== 'ArrowLeft') {
     event.preventDefault()
-  } else if ($(event.target).text().trim().length > 4 && $(event.target).text().trim() === 't' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') {
+  } else if ($(event.target).text().trim().length > 4 &&
+             $(event.target).text().trim() === 't' &&
+             event.key !== 'Backspace' &&
+             event.key !== 'ArrowRight' &&
+             event.key !== 'ArrowLeft') {
     event.preventDefault()
   }
   // for false
-  if ($(event.target).text().trim().length === 0 && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 't' && event.key !== 'f') {
+  if ($(event.target).text().trim().length === 0 &&
+      event.key !== 'Backspace' && event.key !== 'ArrowRight' &&
+      event.key !== 'ArrowLeft' && event.key !== 't' &&
+      event.key !== 'f') {
     event.preventDefault()
-  } else if ($(event.target).text().trim().length === 1 && $(event.target).text().trim() === 'f' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 'a') {
+  } else if ($(event.target).text().trim().length === 1 &&
+             $(event.target).text().trim() === 'f' &&
+             event.key !== 'Backspace' &&
+             event.key !== 'ArrowRight' &&
+             event.key !== 'ArrowLeft' &&
+             event.key !== 'a') {
     event.preventDefault()
-  } else if ($(event.target).text().trim().length === 2 && $(event.target).text().trim() === 'fa' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 'l') {
+  } else if ($(event.target).text().trim().length === 2 &&
+             $(event.target).text().trim() === 'fa' &&
+             event.key !== 'Backspace' &&
+             event.key !== 'ArrowRight' &&
+             event.key !== 'ArrowLeft' &&
+             event.key !== 'l') {
     event.preventDefault()
-  } else if ($(event.target).text().trim().length === 3 && $(event.target).text().trim() === 'fal' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 's') {
+  } else if ($(event.target).text().trim().length === 3 &&
+             $(event.target).text().trim() === 'fal' &&
+             event.key !== 'Backspace' &&
+             event.key !== 'ArrowRight' &&
+             event.key !== 'ArrowLeft' &&
+             event.key !== 's') {
     event.preventDefault()
-  } else if ($(event.target).text().trim().length === 4 && $(event.target).text().trim() === 'fals' && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft' && event.key !== 'e') {
+  } else if ($(event.target).text().trim().length === 4 &&
+             $(event.target).text().trim() === 'fals' &&
+             event.key !== 'Backspace' &&
+             event.key !== 'ArrowRight' &&
+             event.key !== 'ArrowLeft' &&
+             event.key !== 'e') {
     event.preventDefault()
-  } else if ($(event.target).text().trim().length > 4 && event.key !== 'Backspace' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') {
+  } else if ($(event.target).text().trim().length > 4 &&
+             event.key !== 'Backspace' &&
+             event.key !== 'ArrowRight' &&
+             event.key !== 'ArrowLeft') {
     event.preventDefault()
   }
 }
